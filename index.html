@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>学生管理系统-原生js版</title>
+  <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./turnpage/index.css">
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <div class="header">
+  </div>
+  <div class="menu">
+    <dl class="menu-list">
+      <dt>学生管理</dt>
+      <dd class="active" data-id="student-list">学生列表</dd>
+      <dd data-id="student-add">新增学生</dd>
+    </dl>
+  </div>
+  <div class="content">
+    <div id="student-list" class="content-active">
+      <div class="search">
+        <label for="search-inp">关键字查询</label>
+        <input type="text" id="search-inp">
+        <button id="search-btn">搜索</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th width="100">学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>邮箱</th>
+            <th>年龄</th>
+            <th>手机号</th>
+            <th>住址</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <td>0001</td>
+            <td>塔器</td>
+            <td>女</td>
+            <td>11111@qq.com</td>
+            <td>18</td>
+            <td>13232323232</td>
+            <td>哈尔滨</td>
+            <td>
+              <button class="btn edit">编辑</button>
+              <button class="btn delete">删除</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="change-page">
+        <button class="btn prev-btn">上一页</button>
+        <button class="btn next-btn">下一页</button>
+      </div>
+      <div class="modal">
+        <div class="mask"></div>
+        <div class="modal-content">
+          <h3>编辑表单</h3>
+          <form id="student-edit-form">
+            <div class="form-item">
+              <label for="name">姓名</label><input name="name" type="text" />
+              <div class="error-message">错误信息</div>
+            </div>
+            <div class="form-item">
+              <label for="sex">性别</label><input type="radio" name="sex" value="0" checked />
+              <label for="male" class="sex">男</label><input type="radio" name="sex" value="1" />
+              <label for="female" class="sex">女</label>
+            </div>
+            <div class="form-item">
+              <label for="email">邮箱</label><input type="text" name="email" />
+              <div class="error-message">错误信息</div>
+            </div>
+            <div class="form-item">
+              <label for="number">学号</label><input type="text" name="sNo" />
+              <div class="error-message">错误信息</div>
+            </div>
+            <div class="form-item">
+              <label for="birth">出生年</label><input type="text" name="birth" />
+              <div class="error-message">错误信息</div>
+            </div>
+            <div class="form-item">
+              <label for="phone">手机号</label><input type="text" name="phone" />
+              <div class="error-message">错误信息</div>
+            </div>
+            <div class="form-item">
+              <label for="address">住址</label><input type="text" name="address" />
+              <div class="error-message">错误信息</div>
+            </div>
+            <div class="form-item">
+              <label for=""></label>
+              <input type="submit" class="btn" id="student-edit-btn" value="提交" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="student-add">
+      <form id="student-add-form">
+        <div class="form-item">
+          <label for="name">姓名</label><input name="name" type="text" />
+          <div class="error-message">错误信息</div>
+        </div>
+        <div class="form-item">
+          <label for="sex">性别</label><input type="radio" name="sex" value="0" checked />
+          <label for="male" class="sex">男</label><input type="radio" name="sex" value="1" />
+          <label for="female" class="sex">女</label>
+        </div>
+        <div class="form-item">
+          <label for="email">邮箱</label><input type="text" name="email" />
+          <div class="error-message">错误信息</div>
+        </div>
+        <div class="form-item">
+          <label for="number">学号</label><input type="text" name="sNo" />
+          <div class="error-message">错误信息</div>
+        </div>
+        <div class="form-item">
+          <label for="birth">出生年</label><input type="text" name="birth" />
+          <div class="error-message">错误信息</div>
+        </div>
+        <div class="form-item">
+          <label for="phone">手机号</label><input type="text" name="phone" />
+          <div class="error-message">错误信息</div>
+        </div>
+        <div class="form-item">
+          <label for="address">住址</label><input type="text" name="address" />
+          <div class="error-message">错误信息</div>
+        </div>
+        <div class="form-item">
+          <label for=""></label>
+          <input type="submit" class="btn" id="student-add-btn" value="提交" />
+          <input type="reset" class="btn" value="重置" />
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="./js/index.js"></script>
+  <script src="./js/jquery-3.3.1.js"></script>
+  <script src="./turnpage/index.js"></script>
+  <!-- <script src="./js/jqIndex.js"></script> -->
+</body>
+
+</html>

@@ -1,3 +1,3 @@
-# StudentManagement JS版
+# StudentManagement 原生JS版
 该学生管理系统为一个迭代项目，目的是为了熟悉新学习的技术，并且和以往的技术进行比较。
-JS版功能主要有学生的增删改查
+原生JS版功能主要有学生的增删改查
